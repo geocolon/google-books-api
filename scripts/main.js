@@ -13,7 +13,7 @@ const books = (function($) {
       publisher: true,
       description: true,
       // categories: true
-       ISBN: true,
+      //  ISBN: true,
       // LCCN: true,
       // OCLC: true
     },
@@ -23,7 +23,7 @@ const books = (function($) {
       // {name: 'description', param: 'indescription', placeholder: 'description', active: false},
       // {name: 'publisher', param: 'inpublisher', placeholder: 'publisher', active: false},
       // {name: 'category', param: 'subject', placeholder: 'category/subject', active: false},
-      {name: 'ISBN', param: 'isbn', placeholder: 'ISBN', active: false},
+      // {name: 'ISBN', param: 'isbn', placeholder: 'ISBN', active: false},
       // {name: 'LCCN', param: 'lccn', placeholder: 'LCCN', active: false}, // Library of Congress Control Number.
       // {name: 'OCLC', param: 'oclc', placeholder: 'OCLC', active: false}, // Online Computer Library Center number.
       {name: 'general', param: 'general', placeholder: 'all fields', active: false}
@@ -121,11 +121,6 @@ const books = (function($) {
         for(field in this.fields){
           let val = this.data[book][field];
           this.data[book][field] = Array.isArray(val) ? val.join(', ') : val;
-          // // if(Array.isArray(val)){
-          // //      //console.log(field)
-          // //      console.log(val.join(', '))
-          // //      val = val.join(', ');
-          // }
           if(this.fields[field] && this.data[book].hasOwnProperty(field)){
             arr.push(val);
           }
@@ -152,7 +147,6 @@ const books = (function($) {
         // Source: https://stackoverflow.com/questions/28176552/jquery-ui-autocomplete-with-objects
         source: function(request, response){
           response($.map(books.data, function(value, key){
-            console.log('Here is the ISBN: ',value.ISBN);
             return {
               label: value.title,
               value: value.title,
@@ -178,7 +172,7 @@ const books = (function($) {
       }).
         data('ui-autocomplete')._renderItem = function(ul, item){
           // TODO: add placeholder image for items without a thumbnail
-          let thumbnail = $('<a href="' + item.infoLink + '" target="_blank"><img class="img-container" src="' + item.image + '" alt="' + item.value + '"></a>').
+          let thumbnail = $('<center><a href="' + item.infoLink + '" target="_blank"><button class="img-btn pure-button"><img class="img-container" src="' + item.image + '" alt="' + item.value + '"></a></center>').
             addClass('book-thumbnail');
           let info = $('<div></div>').
             addClass('book-info').
@@ -186,7 +180,6 @@ const books = (function($) {
             append('<div class="book-subtitle"' + (typeof item.subtitle === 'undefined' ? 'hidden' : '') + '><h4>' + item.subtitle + '<h4></div>').
             append('<div class="book-authors"' + (typeof item.authors === 'undefined' ? 'hidden' : '') + '><span><p>by ' + item.authors + '</p></span></div>').
             append('<div class="book-description"' + (typeof item.description === 'undefined' ? 'hidden' : '') + '>' + item.description + '</div>').
-            append('<div class="ISBN"' + (typeof item.infoLink === 'undefined' ? 'hidden' : '') + '><a href="' + item.infoLink + '" target="_blank">click to see more.</a></div>');
           return $('<li></li>').
             addClass('flexcontainer').
           // css('background-image', 'url("' + item.image + '")').

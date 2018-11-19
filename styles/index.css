@@ -1,11 +1,11 @@
 
 * {
-
+    font-family: 'Open Sans', sans-serif;
 }
 .container {
     display: flex;
     justify-content: center;
-    max-width: 50%;
+    max-width: 70%;
     margin: 0% auto;
 }
 
@@ -29,21 +29,26 @@ ul {
     top: 7px !important;
     width: 100% !important;
     height: 600px;
-    margin: 10px auto 0px auto;
-    padding:0px;
+    margin: 3rem auto 3rem auto;
+    padding:2%;
     overflow: scroll;
-    border-bottom: 2px gray solid;
-    border-left: 2px gray solid;
-    border-right: 2px gray solid;
+    overflow-x: hidden;
+    
 }
 
 li {
-    width: 100%;
+    width: 70%;
     height: 500px;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+    border: 2px solid gray;
     font-family: 'Open Sans', sans-serif;
 }
 .book-info {
     padding: 0px;
+}
+.img-btn {
+    padding: 2%;
 }
 
 img.img-container {

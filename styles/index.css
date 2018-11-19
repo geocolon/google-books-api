@@ -1,0 +1,59 @@
+
+* {
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    margin: 0% auto;
+}
+
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-description {
+    max-width: 100%;
+}
+.ui-menu-item {
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+
+    left: 0px !important;
+    top: 7px !important;
+    width: 100% !important;
+    height: 600px;
+    margin: 10px auto 0px auto;
+    padding:0px;
+    overflow: scroll;
+    border-bottom: 2px gray solid;
+    border-left: 2px gray solid;
+    border-right: 2px gray solid;
+}
+
+li {
+    width: 100%;
+    height: 500px;
+    font-family: 'Open Sans', sans-serif;
+}
+.book-info {
+    padding: 0px;
+}
+
+img.img-container {
+    display: block;
+    margin: 0px auto;
+    border: 2px solid black;
+}
+
+.book-description {
+    overflow: scroll;
+    width: 100% !important;
+    height: 100px;
+}

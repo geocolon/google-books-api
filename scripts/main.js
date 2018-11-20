@@ -37,9 +37,11 @@ const books = (function($) {
           attr('data-filter-id', f).
           prop('id', filter.name).
           prop('name', filter.param).
-          prop('placeholder', '[' + filter.placeholder + ']').
+          prop('placeholder', ' ' + filter.placeholder + ' ').
           prop('class', 'searchbox filter');
         container.append(elm);
+        elm.addClass('item-flex');
+        container.addClass('main-container');
       }
     },
     buildQueryString: function(){
@@ -180,6 +182,7 @@ const books = (function($) {
             append('<div class="book-subtitle"' + (typeof item.subtitle === 'undefined' ? 'hidden' : '') + '><h4>' + item.subtitle + '<h4></div>').
             append('<div class="book-authors"' + (typeof item.authors === 'undefined' ? 'hidden' : '') + '><span><p>by ' + item.authors + '</p></span></div>').
             append('<div class="book-description"' + (typeof item.description === 'undefined' ? 'hidden' : '') + '>' + item.description + '</div>').
+            append('<div class="more-info"' + (typeof item.infoLink === 'undefined' ? 'hidden' : '') + '><a class="pure-button" href="' + item.infoLink + '" target="_blank">click to see more.</a></div>');
           return $('<li></li>').
             addClass('flexcontainer').
           // css('background-image', 'url("' + item.image + '")').

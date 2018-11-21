@@ -170,7 +170,7 @@ const books = (function($) {
         close: function(event, ui){
           $('.ui-menu').css('display', 'block');
         },
-        appendTo: '#filters'
+        appendTo: '#list'
       }).
         data('ui-autocomplete')._renderItem = function(ul, item){
           // TODO: add placeholder image for items without a thumbnail

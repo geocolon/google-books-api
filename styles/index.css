@@ -41,30 +41,34 @@
 .book-description {
     max-width: 100%;
 }
-.ui-menu-item {
-}
+
+/* .ui-menu-item {
+} */
 
 ul {
     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
     left: 0px !important;
     top: 7px !important;
     max-height: 500px;
-    margin: 3rem auto 3rem auto;
+    margin: 0 auto;
+    text-align: center;
     overflow: scroll;
     overflow-x: hidden;
     
 }
-
+.book-info .ui-menu-item-wrapper {
+    width: 10%;
+}
 li {
     padding:10px;
     margin: 1rem;
+    vertical-align: top;
+    display: inline-block;
+    text-overflow: wrap;
     border: 2px solid gray;
-    font-family: 'Open Sans', sans-serif;
 }
 .book-info {
-    padding: 0px;
+    padding: 20px;
 }
 .img-btn {
     padding: 2%;

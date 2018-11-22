@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+  <title>Simple Bookmark</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/nav.css">
+</head>
+
+<body>
+    <header role="banner">
+      <nav class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Simple Bookmark</a>
+          <a href="bookmark.html">Make Your Bookmarks</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </nav>
+
+      </header>
+      <img class="hero_image" src="./images/hero_image.jpg" >
+
+        <main id="main_page" role="main">
+          <h1>What is Simple Bookmark?</h1>
+          <p>
+            With this web application, you can save a website as a bookmark to a list and add your own titles and/or descriptions.
+        </p>
+          <p>
+            Please head to the menu bar at the top for this page and click "Make Your Bookmarks".
+        </p>
+          <p>
+            Once you are on the next page and see a form, add your desired title of the bookmark. Next, copy and paste the website's URL you would like to save. Then, use the rating system drop-down menu to rate the value of the bookmark. The last input field is to add your own description about the saved bookmark.
+        </p>
+        <p>
+            Once you are done click the "Create Bookmarks" button and you will see your new bookmark added to your list.
+
+        </p>
+          <p>
+            In the saved bookmark area there are two buttons "MORE INFO" and "DELETE".
+        </p>
+          <p>
+            Click MORE INFO to see the bookmark’s description.
+        </p>
+            <p>
+                Click DELETE to permanently delete a bookmark.
+            </p>
+              
+          
+    
+  </main>
+  <footer role="contentinfo"></footer>
+  <script>
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+              x.className += " responsive";
+          } else {
+              x.className = "topnav";
+          }
+      }
+      </script>
+      
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="scripts/bookmarks-app.js"></script>
+  <script type="text/javascript" src="scripts/store.js"></script>
+  <script type="text/javascript" src="scripts/api.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+
+</body>
+</html>

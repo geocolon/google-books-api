@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+  padding-top: 10% ;
+  font-family: 'Roboto', sans-serif;
+  /* background: -webkit-linear-gradient(left, #0072ff, #00c6ff); */
+  background-color:#fff;
+}
+a {
+  font-size:1rem; 
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+
+main {
+  background-color: white;
+  padding: 1rem;
+  max-width: 90%;
+  margin: 20px auto 0px auto;
+}
+button {
+  margin: 0px auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  top: 0px;
+  margin: 0px;
+  position: absolute;
+}
+#js-bookmarks-description {
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  min-height: 150px;
+    border-radius: 25px;
+    padding: 12px 30px;
+}
+
+
+.js-item-element {
+  min-width: 100%;
+  padding: 20px;
+  margin: 10px 10px; 
+  max-height: 100%;
+  border: solid 1px gray;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+.bookmarks-app-desc {
+  overflow: hidden;
+}
+.bookmarks-app-item-toggle {  
+  border: none;
+  padding: 20px;
+  color: #fff;
+  margin-right: 1rem; 
+  border-radius: 10px;
+  background-color:blue;
+}
+
+.bookmarks-app-item-controls {
+  margin-top:50px;
+}
+
+.desc-list {
+  color: black;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.js-item-delete {
+  margin-top:10px; 
+  color: #fff;
+  padding: 20px;
+  border: none;
+  border-radius: 10px; 
+  background:red;
+}
+
+#bookmarks-app-item {
+
+  padding: 10px;
+  
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bookmarks-app {
+  list-style: none;
+  padding-left: 0;
+  min-height: 100px;
+  margin-top: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  width: 90%;
+  margin: 2em auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.bookmarks-app > div {
+  background-color: #f1f1f1;
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.bookmark-desc {
+  font-size: 1rem;
+  color:gray;
+
+}
+
+
+.bookmarks-app-item {
+  text-decoration: none;
+  color: grey;
+  margin: 15px;
+}
+
+#submitbtn {
+  margin: auto auto;
+  background-color: rgb(21, 193, 21);
+  border: none;
+  color: #fff;
+  max-width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+
+#main_page {
+  margin-bottom: 200px;
+}
+/* .shopping-item__checked {
+  text-decoration: line-through;
+} */
+
+
+
+/* Grid measurements:
+ *
+ *   960px wide including 12 gutters (half gutters on both edges)
+ *
+ *   60px columns (12)
+ *   20px gutters (two half-gutters + 11 full gutters, so 12 total)
+ *
+ *
+ *   For smaller screens, we always want 20px of padding on either side,
+ *   so 960 + 20 + 20 => 1000px
+ *
+ **/
+ .row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
+  float: left;
+
+  /* Gutters:
+   * Each column is padded by half-a-gutter on each side,
+   *
+   * Half a gutter is 10px, 10/960 (context) = 1.041666%
+   *
+   */
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/* Mobile defaults */
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
+  width: 100%;
+}
+
+
+
+/* Non-mobile, grid */
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: calc(1em + 1vw);
+  }
+  /* 3 columns, 3/12 in % */
+  .col-3 {
+    width: 25%;
+  }
+
+  .login-form {
+    margin: 1em;
+  }
+
+  /* 4 columns, 4/12 in % */
+  .col-4 {
+    width: 33.333333%;
+  }
+
+  /* 6 columns, 6/12 in % */
+  .col-6 {
+    width: 50%;
+  }
+
+  /* 12 columns, 12/12 in % */
+  .col-12 {
+    width: 100%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+  .flex-container {
+    min-width: 640px;
+  }
+  
+  * {font-size: 0.5rem;}
+  
+  .js-item-element {
+    text-align: center;
+    min-width: 120px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size:1rem;
+  }
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+
+  }
+  

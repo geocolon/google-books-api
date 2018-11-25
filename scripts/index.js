@@ -15,6 +15,7 @@ function bookSearch(){
         let book = data.items[i].volumeInfo;
         let image = data.items[i].volumeInfo.imageLinks.thumbnail;
         let addressLink = data.items[i].volumeInfo.infoLink;
+        console.log(image);
         results.innerHTML += 
         `
         <div class="col-3">

@@ -19,7 +19,7 @@ function bookSearch(){
       console.log('This is the data: ',data);
       for(let i = 0; i < data.items.length; i++){
         let book = data.items[i].volumeInfo;
-        let image = data.items[i].volumeInfo.imageLinks.thumbnail.splice(3,0,'ps');
+        let image = data.items[i].volumeInfo.imageLinks.thumbnail;
         let addressLink = data.items[i].volumeInfo.infoLink;
         console.log('Image resource: ',image);
         results.innerHTML += 

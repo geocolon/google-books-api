@@ -3,16 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Google APIs</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-  </head>
+    <link href="css/float-grid.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">  </head>
   <body>
-    <h1>Book Finder</h1>
+    
+      <div class="topnav" id="myTopnav">
+          <a href="#home" class="active">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+          <a href="javascript:void(0);" class="icon" onclick="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    <main role="main">
+    <div class="container">
+    <h1>Google APIs</h1>
     <form>
       <input id="search" placeholder="Title or Author">
       <button id="button" type="button">Click Me</button>
     </form>
     <div class="row" id="results"></div>
+    </div>
+  </div>
+  </main>
 
 
 
@@ -20,8 +37,11 @@
 
 
 
+  <footer role="contentinfo"></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="scripts/index.js"></script>
+  
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
+    
   </body>
 </html>

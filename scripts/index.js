@@ -20,7 +20,7 @@ function bookSearch(){
       for(let i = 0; i < data.items.length; i++){
         let book = data.items[i].volumeInfo;
         let image = data.items[i].volumeInfo.imageLinks.thumbnail;
-        let addressLink = data.items[i].volumeInfo.infoLink;
+        let addressLink = JSON.stringify(data.items[i].volumeInfo.infoLink);
         console.log('Image resource: ', typeof image === String);
         results.innerHTML += 
         `

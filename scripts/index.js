@@ -6,6 +6,12 @@ function bookSearch(){
 
   console.log(search);
 
+  const mixContent = (ImageLink) => {
+    console.log(ImageLink);
+
+  };
+
+
   $.ajax({
     url: 'https://www.googleapis.com/books/v1/volumes?q=' + search,
     dataType: 'json',

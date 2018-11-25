@@ -20,7 +20,7 @@ h1 {
   text-align: center;
 }
 img {
-  border: 5px black solid!important;
+  border: 1px gray solid!important;
   margin: auto auto;
   padding: 1rem;
   display: block;

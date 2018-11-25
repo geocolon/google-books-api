@@ -10,12 +10,12 @@ function bookSearch(){
     url: 'https://www.googleapis.com/books/v1/volumes?q=' + search,
     dataType: 'json',
     success: function(data) {
-      console.log(data);
+      console.log('This is the data: ',data);
       for(let i = 0; i < data.items.length; i++){
         let book = data.items[i].volumeInfo;
         let image = data.items[i].volumeInfo.imageLinks.thumbnail;
         let addressLink = data.items[i].volumeInfo.infoLink;
-        console.log(image);
+        console.log('Image resource: ',image);
         results.innerHTML += 
         `
         <div class="col-3">

@@ -33,7 +33,8 @@ form {
   margin-top: 2em;
 }
 .list-content {
-  border: 1em gray solid;
+  border: 1px gray solid;
+  border-radius: 4px;
   min-width: 100%;
   overflow: hidden;
   overflow-y: scroll;

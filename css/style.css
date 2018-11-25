@@ -20,9 +20,10 @@ h1 {
   text-align: center;
 }
 img {
+  border: 5px black solid!important;
   margin: auto auto;
+  padding: 1rem;
   display: block;
-  border: 1px black solid;
 }
 form {
   padding: 10px;
@@ -32,6 +33,7 @@ form {
   margin-top: 2em;
 }
 .list-content {
+  border: 1em gray solid;
   min-width: 100%;
   overflow: hidden;
   overflow-y: scroll;

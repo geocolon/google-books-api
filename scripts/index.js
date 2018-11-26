@@ -21,7 +21,7 @@ function bookSearch(){
         let book = data.items[i].volumeInfo;
         let image = data.items[i].volumeInfo.imageLinks.thumbnail;
         let addressLink = JSON.stringify(data.items[i].volumeInfo.infoLink);
-        console.log('Image resource: ', typeof image === Object);
+        console.log('Image resource: ', typeof image);
         results.innerHTML += 
         `
         <div class="col-3">

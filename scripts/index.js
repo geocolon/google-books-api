@@ -26,8 +26,8 @@ function bookSearch(){
         `
         <div class="col-3">
         <div class="list-content">
-        <div class="class="${typeof image === 'undefined' ? 'hidden' : ''}">
-        <img src="${image}" alt="${book.value}">
+        <div>
+        <img src="${image}" alt="${book.title}">
         </div>
         <h4>${book.title}</h4>
         <p>by ${book.authors}</p>

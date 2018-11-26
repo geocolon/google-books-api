@@ -31,6 +31,10 @@ form {
   margin-right: auto;
   margin-top: 2em;
 }
+#results {
+  overflow: hidden;
+  overflow-y: scroll;
+}
 .list-content {
   border: 1px gray solid;
   border-radius: 4px;

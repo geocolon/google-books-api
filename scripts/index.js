@@ -35,7 +35,7 @@ function bookSearch(){
         <div id="desc${i}" class="desc">
         <p>${book.description}</p>
         </div>
-        <a href="${addressLink}"><button>More info.</button></a>
+        <a href="${addressLink}">More info.</a>
         </div>
         </div>
         `;

@@ -34,7 +34,7 @@ form {
 #results {
   overflow: hidden;
   overflow-y: scroll;
-  height: 40vh;
+  height: 60vh;
 }
 .list-content {
   border: 1px gray solid;
@@ -42,6 +42,7 @@ form {
   min-width: 100%;
   overflow: hidden;
   overflow-y: scroll;
+  width: calc(100% - 100px);
   height: 300px;
   margin: 1% auto;
   padding: 10px;

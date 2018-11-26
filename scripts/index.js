@@ -24,7 +24,7 @@ function bookSearch(){
         console.log('Image resource: ', typeof image);
         results.innerHTML += 
         `
-        <div class="col-3">
+        <div class="col-4">
         <div class="list-content">
         <div>
         <img src="${image}" alt="${book.title}">

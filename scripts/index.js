@@ -13,7 +13,7 @@ function bookSearch(){
 
 
   $.ajax({
-    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&max-results=40',
+    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&max-results=40&start-index=0',
     dataType: 'json',
     success: function(data) {
       console.log('This is the data: ',data);

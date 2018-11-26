@@ -37,7 +37,7 @@ form {
   height: 60vh;
 }
 .list-content {
-  border: 1px gray solid;
+  border: 1px gray solid!important;
   border-radius: 4px;
   min-width: 100%;
   overflow: hidden;

@@ -35,14 +35,14 @@ form {
   overflow: hidden;
   overflow-y: scroll;
   height: 60vh;
+  width: calc(100% - 100px);
+  border: 1px gray solid;
 }
 .list-content {
-  border: 1px gray solid!important;
   border-radius: 4px;
   min-width: 100%;
   overflow: hidden;
   overflow-y: scroll;
-  width: calc(100% - 100px);
   height: 300px;
   margin: 1% auto;
   padding: 10px;

@@ -34,6 +34,7 @@ form {
 #results {
   overflow: hidden;
   overflow-y: scroll;
+  height: 40vh;
 }
 .list-content {
   border: 1px gray solid;

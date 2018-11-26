@@ -13,7 +13,7 @@ function bookSearch(){
 
 
   $.ajax({
-    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&max-results=40',
+    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + 'key=503070298434-426dr7dmivmnnfv1fr0t5o1p0cjjs51j.apps.googleusercontent.com',
     dataType: 'json',
     success: function(data) {
       console.log('This is the data: ',data);

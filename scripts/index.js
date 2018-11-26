@@ -1,27 +1,22 @@
 'use strict';
 function bookSearch(){
-  var search = document.getElementById('search').value;
+  const search = document.getElementById('search').value;
 
   document.getElementById('results').innerHTML = '',
 
   console.log(search);
 
-  const mixContent = (ImageLink) => {
-    console.log(ImageLink);
-
-  };
-
 
   $.ajax({
-    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&max-results=20&start-index=21',
+    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&startIndex=0&maxResults=20',
     dataType: 'json',
     success: function(data) {
       console.log('This is the data: ',data);
       for(let i = 0; i < data.items.length; i++){
         let book = data.items[i].volumeInfo;
         let image = data.items[i].volumeInfo.imageLinks.thumbnail.replace(/http/gi,'https');
-        let addressLink = JSON.stringify(data.items[i].volumeInfo.infoLink);
-        console.log('Image resource: ', typeof image);
+        let addressLink = data.items[i].volumeInfo.infoLink;
+        console.log('url resource: ', 'https://www.googleapis.com/books/v1/volumes?q=' + search + '&startIndex=0&maxResults=20');
         results.innerHTML += 
         `
         <div class="col-4">
@@ -35,7 +30,7 @@ function bookSearch(){
         <div id="desc${i}" class="desc">
         <p>${book.description}</p>
         </div>
-        <a href="${addressLink}">More info.</a>
+        <a href="${addressLink}" target="_blank"><button>More info.</button></a>
         </div>
         </div>
         `;
